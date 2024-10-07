@@ -7,6 +7,23 @@ from typing import Literal
 load_dotenv()
 
 system_prompt = "Your job is to decide whether or not to escalate to a manager."
+
+k_shot = '''
+EXAMPLE 1:
+User: My FOH isn't working.
+Assistant: False, the customer is asking a support question that we can answer.
+
+EXAMPLE 2:
+User: I hate you.
+Assistant: True, the customer is expressing negative emotions towards the staff.
+
+EXAMPLE 3:
+User: I'm a dealer.
+Assistant: True, the customer is a dealer and needs to be escalated to a manager.
+'''
+
+system_prompt += k_shot
+
 user_input = "My FOH isn't working."
 
 class ToEscalate(BaseModel):
