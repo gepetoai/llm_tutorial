@@ -5,3 +5,4 @@ python-dotenv
 langchain
 langchain-openai
 llama-index
+instructor
