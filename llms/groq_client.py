@@ -14,7 +14,7 @@ res = client.chat.completions.create(
     model="llama3-8b-8192",
     messages=[
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_inquiry}
+        {"role": "user", "content": user_inquiry},
     ],
     temperature = 0,
     max_tokens = 100)

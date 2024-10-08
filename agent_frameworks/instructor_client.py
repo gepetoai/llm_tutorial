@@ -4,7 +4,6 @@ import instructor
 from dotenv import load_dotenv
 from anthropic import Anthropic
 from openai import OpenAI
-from typing import Literal
 
 # Load environment variables
 load_dotenv()
