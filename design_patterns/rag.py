@@ -80,8 +80,7 @@ print(f"Top 3 matches for '{query}':")
 
 #create k-shot examples to append to the system prompt
 k_shot = ""
-for person in results:
-    k_shot += f"Person: {person}\n"
+for i,person in enumerate(results):
+    k_shot += f"Person {i+1}: {person}\n"
 
-
-
+print(k_shot)
