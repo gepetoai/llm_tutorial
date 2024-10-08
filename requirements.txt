@@ -6,3 +6,4 @@ langchain
 langchain-openai
 llama-index
 instructor
+faiss-cpu
