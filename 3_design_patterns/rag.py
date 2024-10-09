@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
+#we want to find the right people to answer the user's question
 people = [
     "First name: Alice; Last Name: Johnson; Job Title: DevOps Engineer; Expertise: Terraform, AWS CloudFormation, CI/CD pipelines; Email: alice.johnson@example.com",
     "First name: Bob; Last Name: Smith; Job Title: Machine Learning Engineer; Expertise: TensorFlow, PyTorch, Natural Language Processing; Email: bob.smith@example.com",

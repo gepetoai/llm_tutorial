@@ -11,6 +11,11 @@ load_dotenv()
 # Define the system prompt
 system_prompt = "Your job is to decide whether or not to escalate to a manager."
 
+# Define Pydantic model for the response
+class ToEscalate(BaseModel):
+    escalate: bool
+    reason: str
+    
 # Define k-shot examples
 k_shot = '''
 EXAMPLE 1:
@@ -32,10 +37,6 @@ system_prompt += k_shot
 # Define user input
 user_input = "My FOH isn't working."
 
-# Define Pydantic model for the response
-class ToEscalate(BaseModel):
-    escalate: bool
-    reason: str
 
 # Initialize Anthropic client using instructor
 client = instructor.from_anthropic(Anthropic())
